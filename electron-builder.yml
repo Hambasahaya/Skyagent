@@ -1,0 +1,28 @@
+appId: com.skyagen.desktop
+productName: SKYagen
+copyright: Copyright © 2026 SKYagen
+files:
+  - dist/**
+  - electron/**
+  - build/**
+directories:
+  output: D:/Skyagents/release
+  buildResources: build
+win:
+  icon: build/icon.ico
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: ${productName}-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+mac:
+  target:
+    - dmg
+  category: public.app-category.business
+  artifactName: ${productName}-${version}.${ext}

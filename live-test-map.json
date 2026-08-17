@@ -1,0 +1,30 @@
+{
+  "baseUrlDefault": "http://localhost:8080",
+  "timeoutMs": 6000,
+  "fastPath": [
+    { "id": "auth.login", "method": "POST", "path": "/api/auth/login", "critical": true, "body": "credentials" },
+    { "id": "auth.me", "method": "GET", "path": "/api/auth/me", "critical": true },
+    { "id": "admin.dashboard", "method": "GET", "path": "/api/admin/dashboard", "critical": false },
+    { "id": "dashboard.summary", "method": "GET", "path": "/api/dashboard/summary", "critical": true },
+    { "id": "dashboard.charts", "method": "GET", "path": "/api/dashboard/charts", "critical": false },
+    { "id": "dashboard.recentDocuments", "method": "GET", "path": "/api/dashboard/recent-documents", "critical": false },
+    { "id": "dashboard.recentJoinings", "method": "GET", "path": "/api/dashboard/recent-joinings", "critical": false },
+    { "id": "seafarers.list", "method": "GET", "path": "/api/seafarers?limit=5", "critical": true },
+    { "id": "seafarers.search", "method": "GET", "path": "/api/seafarers/search?q=a&limit=5", "critical": false },
+    { "id": "principals.list", "method": "GET", "path": "/api/admin/principals?active=true", "critical": true },
+    { "id": "vessels.list", "method": "GET", "path": "/api/admin/vessels?active=true", "critical": true },
+    { "id": "joining.list", "method": "GET", "path": "/api/joining-principals?limit=5", "critical": true },
+    { "id": "joining.statuses", "method": "GET", "path": "/api/admin/joining-statuses?active=true", "critical": false },
+    { "id": "documents.types", "method": "GET", "path": "/api/admin/document-types?active=true", "critical": true },
+    { "id": "documents.names", "method": "GET", "path": "/api/admin/document-names?active=true", "critical": true },
+    { "id": "documents.report", "method": "GET", "path": "/api/documents/report", "critical": false },
+    { "id": "documents.expiring", "method": "GET", "path": "/api/documents/expiring?days=30&limit=5", "critical": false },
+    { "id": "blacklists.list", "method": "GET", "path": "/api/admin/blacklists?active=true", "critical": false },
+    { "id": "reports.crew", "method": "GET", "path": "/api/reports/crew", "critical": false },
+    { "id": "reports.documents", "method": "GET", "path": "/api/reports/documents", "critical": false },
+    { "id": "reports.joining", "method": "GET", "path": "/api/reports/joining", "critical": false },
+    { "id": "users.list", "method": "GET", "path": "/api/admin/users?limit=5", "critical": false },
+    { "id": "settings.profile", "method": "GET", "path": "/api/settings/profile", "critical": false },
+    { "id": "settings.app", "method": "GET", "path": "/api/admin/settings/app", "critical": false }
+  ]
+}
